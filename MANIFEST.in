@@ -1,0 +1,6 @@
+include CHANGES.rst COPYING README.rst
+include docs/Makefile
+include *.yml *.ini *.json
+recursive-include docs *.png *.py *.rst
+recursive-include tests *.yml *.json *.ini *.py
+recursive-include tests/files *
