@@ -32,8 +32,6 @@ setup(
                  "session data"),
     install_requires=[
         "docutils >=0.10",
-    ],
-    depends=[
         "six ==1.10",
     ],
     keywords="python cli keyutil secret django flask",
