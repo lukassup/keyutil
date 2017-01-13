@@ -10,8 +10,15 @@ def readme():
 
 setup(
     name="keyutil",
+    version="0.1.0",
+    url="http://github.com/lukassup/keyutil",
+    description=("utility to generate SECRET_KEYs for securing "
+                 "session data"),
+    long_description=readme(),
     author="Lukas Šupienis",
     author_email="lukas.supienis@gmail.com",
+    keywords="python cli keyutil secret django flask",
+    license="BSD",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -25,22 +32,19 @@ setup(
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: Implementation :: CPython",
         "Topic :: Utilities",
     ],
-    description=("utility to generate SECRET_KEYs for securing "
-                 "session data"),
+    packages=find_packages(exclude=["tests"]),
     install_requires=[
         "docutils >=0.10",
         "six ==1.10",
     ],
-    keywords="python cli keyutil secret django flask",
-    license="BSD",
-    long_description=readme(),
-    packages=find_packages(exclude=["tests"]),
-    test_suite="tests",
-    url="http://github.com/lukassup/keyutil",
-    version="0.1.0",
+    tests_require=[
+        'nose',
+    ],
+    test_suite="nose.collector",
     zip_safe=True,
     entry_points={
         'console_scripts': [
